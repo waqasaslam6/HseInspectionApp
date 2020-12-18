@@ -6,6 +6,8 @@ import 'package:hse/pages/HseResources.dart';
 import 'package:hse/pages/MyProfile.dart';
 import 'package:hse/pages/StatusReports.dart';
 import 'package:hse/pages/UnsafeActsConditions.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:hse/pages/Login.dart';
 
 class Dashboard extends StatefulWidget {
   @override
@@ -13,10 +15,43 @@ class Dashboard extends StatefulWidget {
 }
 
 class _DashboardState extends State<Dashboard> {
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          onPressed: ()
+          {
+            showDialog(
+              context: context,
+              child: AlertDialog(
+                title: Text("Logout"),
+                content: Text("Are you sure you want to exit?"),
+                actions: [
+                  MaterialButton(
+                    onPressed: ()=>Navigator.pop(context),
+                    color: Theme.of(context).primaryColor,
+                    child: Text("No"),
+                    textColor: Colors.white,
+                  ),
+                  MaterialButton(
+                    onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context)=> Login()
+                      ));
+                    },
+                    color: Colors.grey,
+                    child: Text("Yes"),
+                    textColor: Colors.white,
+                  ),
+                ],
+              )
+            );
+          },
+          icon: Icon(Icons.arrow_back),
+        ),
         title: Container(
             padding: EdgeInsets.all(10),
             decoration: BoxDecoration(

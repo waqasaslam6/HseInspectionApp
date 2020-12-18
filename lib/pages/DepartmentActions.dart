@@ -67,7 +67,6 @@ class _DepartmentActionsState extends State<DepartmentActions> {
               ],
             ),
             SizedBox(height: 10,),
-            SizedBox(height: 15,),
             Center(
                 child: Text(
                   'Weekly Incident Summary',

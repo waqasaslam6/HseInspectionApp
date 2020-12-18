@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hse/bar_chart/bar_chart_page2.dart';
 
 class StatusReports extends StatefulWidget {
   @override
@@ -68,7 +67,6 @@ class _StatusReportsState extends State<StatusReports> {
               ],
             ),
             SizedBox(height: 10,),
-            BarChartPage2(),
           ],
         ),
       ),

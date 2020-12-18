@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hse/bar_chart/bar_chart_page.dart';
-import 'package:hse/bar_chart/bar_chart_page2.dart';
 
 class ComplianceStatus extends StatefulWidget {
   @override
@@ -73,7 +71,7 @@ class _ComplianceStatusState extends State<ComplianceStatus> {
                 ],
               ),
               SizedBox(height: 10,),
-              BarChartPage2(),
+
             ],
           ),
         ),
